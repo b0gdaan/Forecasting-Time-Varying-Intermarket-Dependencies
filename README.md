@@ -1,5 +1,11 @@
 # Forecasting Time-Varying Intermarket Dependencies
 
+> **Repository guide:** For the focused research pipeline, start with
+> [master_rad](https://github.com/b0gdaan/master_rad). The complete thesis and
+> reported results are in [master-thesis](https://github.com/b0gdaan/master-thesis).
+> This repository contains a separate implementation snapshot; do not assume its
+> configuration or outputs are identical to the other repositories.
+
 **Master's thesis** · Forecasting rolling correlations between Bitcoin and conventional financial assets using machine learning.
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
@@ -93,7 +99,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-First run downloads ~10 years of price data from Yahoo Finance (~30 sec).  
+First run downloads ~10 years of price data from Yahoo Finance (~30 sec).
 Subsequent runs use cached `data/raw/prices.csv`.
 
 ```bash
@@ -115,7 +121,7 @@ jupyter notebook
 | `min_train_size` | `800` | Minimum training observations |
 | `refit_every` | `20` | Walk-forward refit frequency (days) |
 
-**No GPU?** Set `xgb_device: "cpu"` in `config.yaml`.  
+**No GPU?** Set `xgb_device: "cpu"` in `config.yaml`.
 **No `arch` package?** Set `use_dcc_garch: false`.
 
 ---
